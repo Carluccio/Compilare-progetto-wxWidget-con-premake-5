@@ -55,10 +55,10 @@ if %INPUT% == 5 goto 64A
 if %INPUT% == 6 goto 64C
 REM 32B, 32D, 64B, 64D o MENU
 CLS
-if %INPUT% == 3 goto MENU
-if %INPUT% == 4 goto MENU
-if %INPUT% == 7 goto MENU
-if %INPUT% == 8 goto MENU
+if %INPUT% == 3 goto 32B
+if %INPUT% == 4 goto 32D
+if %INPUT% == 7 goto 64B
+if %INPUT% == 8 goto 64D
 
 :32A
 IF EXIST obj (
