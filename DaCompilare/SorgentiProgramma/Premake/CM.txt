@@ -9,12 +9,12 @@ goto continua
 )
 :premake
 TITLE COMPILAZIONE PREMAKE-5
-premake5 gmake --file="..\NuovoPesoForma\Premake\premake5.lua"
+premake5 gmake --file="..\SorgentiProgramma\Premake\premake5.lua"
 :continua
 TITLE INIZIALIZZO
-cd ..\NuovoPesoForma\Premake
-SET OUT=D:\Eseguibili\Premake\PesoForma
-set PROGRAMMA=PesoForma
+cd ..\SorgentiProgramma\Premake
+SET OUT=D:\Eseguibili\Premake\Programma
+set PROGRAMMA=Programma
 SET PATH1=%PATH%
 @echo --- WxWidgets e SqLite vedi premake5.lua ----------
 @echo --- COMP32 o COMP64 =n se non installato ----------

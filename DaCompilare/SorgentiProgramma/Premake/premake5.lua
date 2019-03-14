@@ -1,7 +1,7 @@
 local ROOT = "../"
 -------------- wxWidgets o n ---------------
-local wx1 = "D:/wxWidgets-3.1.2"
-VER = "31"
+local wx1 = "D:/wxWidgets-3.1.2" -- cambiare se si usa un'altra versione
+VER = "31" -- cambiare se si usa un'altra versione
 local STA32= "gcc_lib"
 local STA64= "gcc_lib64"
 local DIN32= "gcc_dll"
@@ -12,7 +12,7 @@ local allegro = "n" -- o "n"
 workspace "MyWorkspace"
    configurations { "DebugDinamic", "ReleaseDinamic", "DebugStatic", "ReleaseStatic" }
 	platforms      { "x64", "x32" }
-	project "PesoForma"
+	project "Programma"
    kind "WindowedApp"
    targetdir ("?")
    targetname "%PROGRAMMA%"
