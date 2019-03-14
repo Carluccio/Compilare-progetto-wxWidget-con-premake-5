@@ -1,0 +1,1 @@
+Rinominare CM.txt in CM.cmd

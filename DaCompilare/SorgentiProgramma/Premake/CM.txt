@@ -1,0 +1,193 @@
+TITLE COMPILAZIONE PREMAKE-5
+@echo off
+MODE CON COLS=132 LINES=30
+cd ..\..\Premake5
+if exist premake5.exe (
+goto premake
+) else (
+goto continua
+)
+:premake
+TITLE COMPILAZIONE PREMAKE-5
+premake5 gmake --file="..\NuovoPesoForma\Premake\premake5.lua"
+:continua
+TITLE INIZIALIZZO
+cd ..\NuovoPesoForma\Premake
+SET OUT=D:\Eseguibili\Premake\PesoForma
+set PROGRAMMA=PesoForma
+SET PATH1=%PATH%
+@echo --- WxWidgets e SqLite vedi premake5.lua ----------
+@echo --- COMP32 o COMP64 =n se non installato ----------
+SET COMP32=D:\TDM-GCC-32A\bin
+SET COMP64=D:\TDM-GCC-64A\bin
+@echo --- ------------------------------------ ----------
+@echo on
+:MENU
+TITLE COMPILAZIONE PREMAKE-5
+COLOR 1F
+SET INPUT=7
+CLS
+@echo.
+@echo ---------------------------------------------------------------------------
+@echo    Carlo Sala v: 2.0.0   ---        Compilazione con premake        ---
+@echo ---------------------------------------------------------------------------
+@echo.
+@echo.
+@echo  1) Architettura 32 dinamica release   5) Architettura 64 dinamica release
+@echo.
+@echo  2) Architettura 32 dinamica debug     6) Architettura 64 dinamica debug
+@echo.
+@echo.
+@echo  3) Architettura 32 statica release    7) Architettura 64 statica release
+@echo.
+@echo  4) Architettura 32 statica debug      8) Architettura 64 statica debug
+@echo.
+@echo ---------------------------------------------------------------------------
+@echo.
+@echo off
+SET /P INPUT= SCELTA OPPURE "0" ESCI :  
+REM 32A, 32C, 64A, 64C o MENU
+CLS
+if %INPUT% == 0 EXIT
+if %INPUT% == 1 goto 32A
+if %INPUT% == 2 goto 32C
+if %INPUT% == 5 goto 64A
+if %INPUT% == 6 goto 64C
+REM 32B, 32D, 64B, 64D o MENU
+CLS
+if %INPUT% == 3 goto MENU
+if %INPUT% == 4 goto MENU
+if %INPUT% == 7 goto MENU
+if %INPUT% == 8 goto MENU
+
+:32A
+IF EXIST obj (
+@echo Cancello la cartella:
+RD /S obj )
+cls
+TITLE COMPILAZIONE PREMAKE-5 Architettura 32 dinamica release
+if %COMP32% == n GOTO MENU
+@echo ATTENDI!
+@echo off
+set PATH=%COMP32%;%PATH1%
+set CAR=%OUT%\ReleaseDinamic_32
+@echo ---------------------------------------------------------------------------
+mingw32-make -f Makefile config="releasedinamic_x32" TARGETDIR="%CAR%"
+goto ESCI
+
+:32B
+IF EXIST obj (
+@echo Cancello la cartella:
+RD /S obj )
+cls
+TITLE COMPILAZIONE PREMAKE-5 Architettura 32 statica release
+if %COMP32% == n GOTO MENU
+@echo ATTENDI!
+@echo off
+set PATH=%COMP32%;%PATH1%
+set CAR=%OUT%\ReleaseStatic_32
+@echo ---------------------------------------------------------------------------
+mingw32-make -f Makefile config="releasestatic_x32" TARGETDIR="%CAR%"
+goto ESCI
+
+:32C
+IF EXIST obj (
+@echo Cancello la cartella:
+RD /S obj )
+cls
+TITLE COMPILAZIONE PREMAKE-5 Architettura 32 dinamica debug
+if %COMP32% == n GOTO MENU
+@echo ATTENDI!
+@echo off
+set PATH=%COMP32%;%PATH1%
+set CAR=%OUT%\DebugDinamic_32
+@echo ---------------------------------------------------------------------------
+mingw32-make -f Makefile config="debugdinamic_x32" TARGETDIR="%CAR%"
+goto ESCI
+
+:32D
+IF EXIST obj (
+@echo Cancello la cartella:
+RD /S obj )
+cls
+TITLE COMPILAZIONE PREMAKE-5 Architettura 32 statica debug
+if %COMP32% == n GOTO MENU
+@echo ATTENDI!
+@echo off
+set PATH=%COMP32%;%PATH1%
+set CAR=%OUT%\DebugStatic_32
+@echo ---------------------------------------------------------------------------
+mingw32-make -f Makefile config="debugstatic_x32" TARGETDIR="%CAR%"
+goto ESCI
+
+:64A
+IF EXIST obj (
+@echo Cancello la cartella:
+RD /S obj )
+cls
+TITLE COMPILAZIONE PREMAKE-5 Architettura 64 dinamica release
+if %COMP64% == n GOTO MENU
+@echo ATTENDI!
+@echo off
+set PATH=%COMP64%;%PATH1%
+set CAR=%OUT%\ReleaseDinamic_64
+@echo ---------------------------------------------------------------------------
+mingw32-make -f Makefile config="releasedinamic_x64" TARGETDIR="%CAR%"
+goto ESCI
+
+:64B
+IF EXIST obj (
+@echo Cancello la cartella:
+RD /S obj )
+cls
+TITLE COMPILAZIONE PREMAKE-5 Architettura 64 statica release
+if %COMP64% == n GOTO MENU
+@echo ATTENDI!
+@echo off
+set PATH=%COMP64%;%PATH1%
+set CAR=%OUT%\ReleaseStatic_64
+@echo ---------------------------------------------------------------------------
+mingw32-make -f Makefile config="releasestatic_x64" TARGETDIR="%CAR%"
+goto ESCI
+
+:64C
+IF EXIST obj (
+@echo Cancello la cartella:
+RD /S obj )
+cls
+TITLE COMPILAZIONE PREMAKE-5 Architettura 64 dinamica debug
+if %COMP64% == n GOTO MENU
+@echo ATTENDI!
+@echo off
+set PATH=%COMP64%;%PATH1%
+set CAR=%OUT%\DebugDinamic_64
+@echo ---------------------------------------------------------------------------
+mingw32-make -f Makefile config="debugdinamic_x64" TARGETDIR="%CAR%"
+goto ESCI
+
+:64D
+IF EXIST obj (
+@echo Cancello la cartella:
+RD /S obj )
+cls
+TITLE COMPILAZIONE PREMAKE-5 Architettura 64 statica debug
+if %COMP64% == n GOTO MENU
+@echo ATTENDI!
+@echo off
+set PATH=%COMP64%;%PATH1%
+set CAR=%OUT%\DebugStatic_64
+@echo ---------------------------------------------------------------------------
+mingw32-make -f Makefile config="debugstatic_x64" TARGETDIR="%CAR%"
+goto ESCI
+
+:ESCI
+@echo FINE COMPILAZIONE  --------------------------------------------------------
+SET INPUT=7
+SET /P INPUT= PREMI UN TASTO PER CONTINUARE o "2" per avviare l'eseguibile ...:  
+CLS
+@for %%f in ("compila.cmd") DO @SET currDir_=%%~df%%~pf
+if %INPUT% == 2 CD /d %CAR%
+if %INPUT% == 2 start %PROGRAMMA%
+if %INPUT% == 2 CD /d %currDir_%
+set CAR
+GOTO MENU
