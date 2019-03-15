@@ -45,4 +45,5 @@ links
 	"wxscintillad",
 	"wxtiffd",
 	"wxzlibd",
+	"comctl32", "rpcrt4", "shell32", "gdi32", "kernel32", "user32", "comdlg32", "ole32", "oleaut32", "advapi32", "oleacc", "winspool", "winmm", "shlwapi", "uuid", "version", "wsock32", "wininet", "uxtheme"
 	}
