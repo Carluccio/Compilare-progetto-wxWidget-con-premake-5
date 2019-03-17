@@ -38,6 +38,7 @@ workspace "MyWorkspace"
 	  defines { "D__WXDEBUG__", "HAVE_W32API_H", "__WXMSW__", "_UNICODE", "DWXUSINGDLL" }
       symbols "On"
 	  architecture "x86"
+	  wxDebug = "si"
 	  if not (wx1=="n") then
 	  includedirs
     {
@@ -57,6 +58,7 @@ workspace "MyWorkspace"
 	  defines { "D__WXDEBUG__", "HAVE_W32API_H", "__WXMSW__", "_UNICODE", "DWXUSINGDLL" }
       symbols "On"
 	  architecture "x64"
+	  wxDebug = "si"
 	  if not (wx1=="n") then
 	  includedirs
     {
@@ -76,6 +78,7 @@ workspace "MyWorkspace"
 	  defines { "NDEBUG", "HAVE_W32API_H", "__WXMSW__", "_UNICODE", "DWXUSINGDLL" }
       optimize "On"
 	  architecture "x86"
+	  wxDebug = "no"
      if not (wx1=="n") then
 	 includedirs
     {
@@ -95,6 +98,7 @@ workspace "MyWorkspace"
 	  defines { "NDEBUG", "HAVE_W32API_H", "__WXMSW__", "_UNICODE", "DWXUSINGDLL" }
       optimize "On"
 	  architecture "x64" 
+	  wxDebug = "no"
 	  if not (wx1=="n") then
 	  includedirs
       {
@@ -114,6 +118,7 @@ workspace "MyWorkspace"
 	  defines { "D__WXDEBUG__", "HAVE_W32API_H", "__WXMSW__", "_UNICODE"}
       symbols "On"
 	  architecture "x86"
+	  wxDebug = "si"
 	 if not (wx1=="n") then
 	 includedirs
     {
@@ -133,6 +138,7 @@ workspace "MyWorkspace"
 	  defines { "D__WXDEBUG__", "HAVE_W32API_H", "__WXMSW__", "_UNICODE" }
       symbols "On"
 	  architecture "x64"
+	  wxDebug = "si"
 	  if not (wx1=="n") then
 	  includedirs
     {
@@ -152,6 +158,7 @@ workspace "MyWorkspace"
 	  defines { "NDEBUG", "HAVE_W32API_H", "__WXMSW__", "_UNICODE" }
       optimize "On"
 	  architecture "x86" 
+	  wxDebug = "no"
 	  if not (wx1=="n") then
 	  includedirs
     {
@@ -161,7 +168,7 @@ workspace "MyWorkspace"
 	
 	libdirs
     {
-     wx1 .. "/lib/" .. STA32 ..""
+     wx1 .. "/lib/" .. STA32
 	}  
    dofile "libwx.lua"
    end
@@ -183,6 +190,7 @@ workspace "MyWorkspace"
 	  defines { "NDEBUG", "HAVE_W32API_H", "__WXMSW__", "_UNICODE" }
       optimize "On"
 	  architecture "x64" 
+	  wxDebug = "no"
 	  if not (wx1=="n") then
 	  includedirs
       {
