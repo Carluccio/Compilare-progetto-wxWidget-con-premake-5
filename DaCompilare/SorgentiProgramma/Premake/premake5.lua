@@ -35,6 +35,7 @@ workspace "MyWorkspace"
     }
    filter { "configurations:DebugDinamic", "platforms:*32" }
       linkoptions { "-mwindows" }
+	  resoptions { "-F pe-i386" }
 	  defines { "D__WXDEBUG__", "HAVE_W32API_H", "__WXMSW__", "_UNICODE", "DWXUSINGDLL" }
       symbols "On"
 	  architecture "x86"
@@ -75,6 +76,7 @@ workspace "MyWorkspace"
 	         
    filter { "configurations:ReleaseDinamic", "platforms:*32" }
       linkoptions { "-s", "-mwindows" }
+	  resoptions { "-F pe-i386" }
 	  defines { "NDEBUG", "HAVE_W32API_H", "__WXMSW__", "_UNICODE", "DWXUSINGDLL" }
       optimize "On"
 	  architecture "x86"
@@ -115,6 +117,7 @@ workspace "MyWorkspace"
 	
 	filter { "configurations:DebugStatic", "platforms:*32" }
       linkoptions { "-mwindows" }
+	  resoptions { "-F pe-i386" }
 	  defines { "D__WXDEBUG__", "HAVE_W32API_H", "__WXMSW__", "_UNICODE"}
       symbols "On"
 	  architecture "x86"
@@ -155,6 +158,7 @@ workspace "MyWorkspace"
 	         
    filter { "configurations:ReleaseStatic", "platforms:*32" }
       linkoptions { "-s", "-mwindows"}
+	  resoptions { "-F pe-i386" }
 	  defines { "NDEBUG", "HAVE_W32API_H", "__WXMSW__", "_UNICODE" }
       optimize "On"
 	  architecture "x86" 
