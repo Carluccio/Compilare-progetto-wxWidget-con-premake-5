@@ -27,14 +27,13 @@ workspace "MyWorkspace"
       -- all paths in premake can have * for wildcard.
       --     /Some/Path/*.txt     will find any .txt file in /Some/Path
       --     /Some/Path/**.txt    will find any .txt file in /Some/Path and any of its subdirectories
-      SourceDir .. "**.h", 
-      SourceDir .. "**.hpp", 
-      SourceDir .. "**.c",
-      SourceDir .. "**.cpp",
-      SourceDir .. "**.rc"
+      SourceDir .. "*.h", 
+      SourceDir .. "*.hpp", 
+      SourceDir .. "*.c",
+      SourceDir .. "*.cpp",
+      SourceDir .. "*.rc"
     }
    filter { "configurations:DebugDinamic", "platforms:*32" }
-      linkoptions { "-mwindows" }
 	  resoptions { "-F pe-i386" }
 	  defines { "D__WXDEBUG__", "HAVE_W32API_H", "__WXMSW__", "_UNICODE", "DWXUSINGDLL" }
       symbols "On"
@@ -52,10 +51,9 @@ workspace "MyWorkspace"
     }  
    dofile "libwx.lua"
    end
-    buildoptions { "-g", "-O0", "-Wall", "-std=gnu++11" }
+    buildoptions { "-O0", "-Wall", "-std=gnu++11" }
     
 	filter { "configurations:DebugDinamic", "platforms:*64" }
-      linkoptions { "-mwindows" }
 	  defines { "D__WXDEBUG__", "HAVE_W32API_H", "__WXMSW__", "_UNICODE", "DWXUSINGDLL" }
       symbols "On"
 	  architecture "x64"
@@ -72,10 +70,9 @@ workspace "MyWorkspace"
     }  
    dofile "libwx.lua"
    end
-    buildoptions { "-g", "-O0", "-Wall", "-std=gnu++11" }
+    buildoptions { "-O0", "-Wall", "-std=gnu++11" }
 	         
    filter { "configurations:ReleaseDinamic", "platforms:*32" }
-      linkoptions { "-s", "-mwindows" }
 	  resoptions { "-F pe-i386" }
 	  defines { "NDEBUG", "HAVE_W32API_H", "__WXMSW__", "_UNICODE", "DWXUSINGDLL" }
       optimize "On"
@@ -93,10 +90,9 @@ workspace "MyWorkspace"
     }  
    dofile "libwx.lua"
    end
-    buildoptions { "-O2", "-Wall", "-std=gnu++11" }
+    buildoptions { "-Wall", "-std=gnu++11" }
     
    filter { "configurations:ReleaseDinamic", "platforms:*64" }
-      linkoptions { "-s", "-mwindows" }
 	  defines { "NDEBUG", "HAVE_W32API_H", "__WXMSW__", "_UNICODE", "DWXUSINGDLL" }
       optimize "On"
 	  architecture "x64" 
@@ -113,10 +109,9 @@ workspace "MyWorkspace"
     }  
    dofile "libwx.lua"
    end
-   	buildoptions { "-O2", "-Wall", "-std=gnu++11" }
+   	buildoptions { "-Wall", "-std=gnu++11" }
 	
 	filter { "configurations:DebugStatic", "platforms:*32" }
-      linkoptions { "-mwindows" }
 	  resoptions { "-F pe-i386" }
 	  defines { "D__WXDEBUG__", "HAVE_W32API_H", "__WXMSW__", "_UNICODE"}
       symbols "On"
@@ -134,10 +129,9 @@ workspace "MyWorkspace"
     }  
    dofile "libwx.lua"
    end
-    buildoptions { "-g", "-O0", "-Wall", "-std=gnu++11" }
+    buildoptions { "-O0", "-Wall", "-std=gnu++11" }
     
 	filter { "configurations:DebugStatic", "platforms:*64" }
-      linkoptions { "-mwindows" }
 	  defines { "D__WXDEBUG__", "HAVE_W32API_H", "__WXMSW__", "_UNICODE" }
       symbols "On"
 	  architecture "x64"
@@ -154,11 +148,10 @@ workspace "MyWorkspace"
     }  
    dofile "libwx.lua"
    end
-    buildoptions { "-g", "-O0", "-Wall", "-std=gnu++11" }
+    buildoptions { "-O0", "-Wall", "-std=gnu++11" }
 	         
    filter { "configurations:ReleaseStatic", "platforms:*32" }
-      linkoptions { "-s", "-mwindows"}
-	  resoptions { "-F pe-i386" }
+ 	  resoptions { "-F pe-i386" }
 	  defines { "NDEBUG", "HAVE_W32API_H", "__WXMSW__", "_UNICODE" }
       optimize "On"
 	  architecture "x86" 
@@ -187,10 +180,9 @@ workspace "MyWorkspace"
     }  
    dofile "liballegro.lua"
 	end
-   buildoptions { "-O2", "-Wall", "-std=gnu++11" }
+   buildoptions { "-Wall", "-std=gnu++11" }
     
    filter { "configurations:ReleaseStatic", "platforms:*64" }
-      linkoptions { "-s", "-mwindows" }
 	  defines { "NDEBUG", "HAVE_W32API_H", "__WXMSW__", "_UNICODE" }
       optimize "On"
 	  architecture "x64" 
@@ -207,6 +199,6 @@ workspace "MyWorkspace"
     }  
    dofile "libwx.lua"
    end
-	buildoptions { "-O2", "-Wall", "-std=gnu++11" }
+	buildoptions { "-Wall", "-std=gnu++11" }
 		   
    filter {}

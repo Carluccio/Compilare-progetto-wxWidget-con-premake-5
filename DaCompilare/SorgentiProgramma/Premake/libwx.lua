@@ -1,6 +1,8 @@
+	linkgroups "On"
+	configuration "windows"
 	if (wxDebug == "no")  then
 	links
-    { 
+	{
 	"wxmsw" .. VER .. "u_core",
 	"wxbase" .. VER .. "u",
 	"wxbase" .. VER .. "u_net",
@@ -22,7 +24,7 @@
 	"wxregexu",
 	"wxscintilla",
 	"wxtiff",
-	"wxzlib"
+	"wxzlib",
 	}
 	end
 	if (wxDebug == "si") then
@@ -52,6 +54,8 @@
 	"wxzlibd"
 	}
 	end
+	linkgroups "Off"
+	configuration "windows"
 	links
 	{
 	"comctl32", "rpcrt4", "shell32", "gdi32", "kernel32", "user32", "comdlg32", "ole32", "oleaut32", "advapi32", "oleacc", "winspool", "winmm", "shlwapi", "uuid", "version", "wsock32", "wininet", "uxtheme"
