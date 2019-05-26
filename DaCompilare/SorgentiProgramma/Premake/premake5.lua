@@ -14,8 +14,7 @@ workspace "MyWorkspace"
 	platforms      { "x64", "x32" }
 	project "Programma"
    kind "WindowedApp"
-   targetdir ("?")
-   targetname "%PROGRAMMA%"
+   targetname ("$(NOMPROG)")
    language "C++"
    --------------------------------------
     -- [ PROJECT FILES CONFIGURATIONS ] --

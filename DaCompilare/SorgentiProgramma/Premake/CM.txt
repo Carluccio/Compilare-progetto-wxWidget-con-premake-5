@@ -72,7 +72,7 @@ if %COMP32% == n GOTO MENU
 set PATH=%COMP32%;%PATH1%
 set CAR=%OUT%\ReleaseDinamic_32
 @echo ---------------------------------------------------------------------------
-mingw32-make -f Makefile config="releasedinamic_x32" TARGETDIR="%CAR%"
+mingw32-make -f Makefile config="releasedinamic_x32" TARGETDIR="%CAR%" NOMPROG="%PROGRAMMA%"
 goto ESCI
 
 :32B
@@ -87,7 +87,7 @@ if %COMP32% == n GOTO MENU
 set PATH=%COMP32%;%PATH1%
 set CAR=%OUT%\ReleaseStatic_32
 @echo ---------------------------------------------------------------------------
-mingw32-make -f Makefile config="releasestatic_x32" TARGETDIR="%CAR%"
+mingw32-make -f Makefile config="releasestatic_x32" TARGETDIR="%CAR%" NOMPROG="%PROGRAMMA%"
 goto ESCI
 
 :32C
@@ -102,7 +102,7 @@ if %COMP32% == n GOTO MENU
 set PATH=%COMP32%;%PATH1%
 set CAR=%OUT%\DebugDinamic_32
 @echo ---------------------------------------------------------------------------
-mingw32-make -f Makefile config="debugdinamic_x32" TARGETDIR="%CAR%"
+mingw32-make -f Makefile config="debugdinamic_x32" TARGETDIR="%CAR%" NOMPROG="%PROGRAMMA%"
 goto ESCI
 
 :32D
@@ -117,7 +117,7 @@ if %COMP32% == n GOTO MENU
 set PATH=%COMP32%;%PATH1%
 set CAR=%OUT%\DebugStatic_32
 @echo ---------------------------------------------------------------------------
-mingw32-make -f Makefile config="debugstatic_x32" TARGETDIR="%CAR%"
+mingw32-make -f Makefile config="debugstatic_x32" TARGETDIR="%CAR%" NOMPROG="%PROGRAMMA%"
 goto ESCI
 
 :64A
@@ -132,7 +132,7 @@ if %COMP64% == n GOTO MENU
 set PATH=%COMP64%;%PATH1%
 set CAR=%OUT%\ReleaseDinamic_64
 @echo ---------------------------------------------------------------------------
-mingw32-make -f Makefile config="releasedinamic_x64" TARGETDIR="%CAR%"
+mingw32-make -f Makefile config="releasedinamic_x64" TARGETDIR="%CAR%" NOMPROG="%PROGRAMMA%"
 goto ESCI
 
 :64B
@@ -147,7 +147,7 @@ if %COMP64% == n GOTO MENU
 set PATH=%COMP64%;%PATH1%
 set CAR=%OUT%\ReleaseStatic_64
 @echo ---------------------------------------------------------------------------
-mingw32-make -f Makefile config="releasestatic_x64" TARGETDIR="%CAR%"
+mingw32-make -f Makefile config="releasestatic_x64" TARGETDIR="%CAR%" NOMPROG="%PROGRAMMA%"
 goto ESCI
 
 :64C
@@ -162,7 +162,7 @@ if %COMP64% == n GOTO MENU
 set PATH=%COMP64%;%PATH1%
 set CAR=%OUT%\DebugDinamic_64
 @echo ---------------------------------------------------------------------------
-mingw32-make -f Makefile config="debugdinamic_x64" TARGETDIR="%CAR%"
+mingw32-make -f Makefile config="debugdinamic_x64" TARGETDIR="%CAR%" NOMPROG="%PROGRAMMA%"
 goto ESCI
 
 :64D
@@ -177,7 +177,7 @@ if %COMP64% == n GOTO MENU
 set PATH=%COMP64%;%PATH1%
 set CAR=%OUT%\DebugStatic_64
 @echo ---------------------------------------------------------------------------
-mingw32-make -f Makefile config="debugstatic_x64" TARGETDIR="%CAR%"
+mingw32-make -f Makefile config="debugstatic_x64" TARGETDIR="%CAR%" NOMPROG="%PROGRAMMA%"
 goto ESCI
 
 :ESCI
