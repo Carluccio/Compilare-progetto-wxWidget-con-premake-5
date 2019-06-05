@@ -1,16 +1,15 @@
-	linkgroups "On"
-	configuration "windows"
-	if (wxDebug == "no")  then
+filter { "configurations:Release*", "platforms:*" }
+	linkoptions { s1 }
 	links
 	{
-	"wxmsw" .. VER .. "u_core",
 	"wxbase" .. VER .. "u",
 	"wxbase" .. VER .. "u_net",
 	"wxbase" .. VER .. "u_xml",
 	"wxexpat",
 	"wxjpeg",
 	"wxmsw" .. VER .. "u_adv",
-	"wxmsw" .. VER .. "u_aui";
+	"wxmsw" .. VER .. "u_core",
+	"wxmsw" .. VER .. "u_aui",
 	"wxmsw" .. VER .. "u_gl",
 	"wxmsw" .. VER .. "u_html",
 	"wxmsw" .. VER .. "u_media",
@@ -24,10 +23,10 @@
 	"wxregexu",
 	"wxscintilla",
 	"wxtiff",
-	"wxzlib",
+	"wxzlib"
 	}
-	end
-	if (wxDebug == "si") then
+	filter { "configurations:Debug*", "platforms:*" }
+	linkoptions { s1 }
 	links
 	{
 	"wxmsw" .. VER .. "ud_core",
@@ -37,7 +36,7 @@
 	"wxexpatd",
 	"wxjpegd",
 	"wxmsw" .. VER .. "ud_adv",
-	"wxmsw" .. VER .. "ud_aui";
+	"wxmsw" .. VER .. "ud_aui",
 	"wxmsw" .. VER .. "ud_gl",
 	"wxmsw" .. VER .. "ud_html",
 	"wxmsw" .. VER .. "ud_media",
@@ -53,9 +52,7 @@
 	"wxtiffd",
 	"wxzlibd"
 	}
-	end
-	linkgroups "Off"
-	configuration "windows"
+	filter { "configurations:*", "platforms:*" }
 	links
 	{
 	"comctl32", "rpcrt4", "shell32", "gdi32", "kernel32", "user32", "comdlg32", "ole32", "oleaut32", "advapi32", "oleacc", "winspool", "winmm", "shlwapi", "uuid", "version", "wsock32", "wininet", "uxtheme"

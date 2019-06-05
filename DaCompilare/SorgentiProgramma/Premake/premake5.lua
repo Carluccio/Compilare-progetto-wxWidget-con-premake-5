@@ -3,9 +3,11 @@ local ROOT = "../"
 local wx1 = "D:/wxWidgets-3.1.2" -- cambiare se si usa un'altra versione
 VER = "31" -- cambiare se si usa un'altra versione
 local STA32= "gcc_lib"
-local STA64= "gcc_lib64"
+local STA64= "gcc_x64_lib"
 local DIN32= "gcc_dll"
-local DIN64= "gcc_dll64"
+local DIN64= "gcc_x64_dll"
+s1 = "-Wl,--start-group"
+s2 = "-Wl,--end-group"
 -------------- allegro o n -----------------
 local allegro = "n" -- o "n"
 --------------------------------------------
@@ -37,7 +39,6 @@ workspace "MyWorkspace"
 	  defines { "D__WXDEBUG__", "HAVE_W32API_H", "__WXMSW__", "_UNICODE", "DWXUSINGDLL" }
       symbols "On"
 	  architecture "x86"
-	  wxDebug = "si"
 	  if not (wx1=="n") then
 	  includedirs
     {
@@ -56,7 +57,6 @@ workspace "MyWorkspace"
 	  defines { "D__WXDEBUG__", "HAVE_W32API_H", "__WXMSW__", "_UNICODE", "DWXUSINGDLL" }
       symbols "On"
 	  architecture "x64"
-	  wxDebug = "si"
 	  if not (wx1=="n") then
 	  includedirs
     {
@@ -76,7 +76,6 @@ workspace "MyWorkspace"
 	  defines { "NDEBUG", "HAVE_W32API_H", "__WXMSW__", "_UNICODE", "DWXUSINGDLL" }
       optimize "On"
 	  architecture "x86"
-	  wxDebug = "no"
      if not (wx1=="n") then
 	 includedirs
     {
@@ -95,7 +94,6 @@ workspace "MyWorkspace"
 	  defines { "NDEBUG", "HAVE_W32API_H", "__WXMSW__", "_UNICODE", "DWXUSINGDLL" }
       optimize "On"
 	  architecture "x64" 
-	  wxDebug = "no"
 	  if not (wx1=="n") then
 	  includedirs
       {
@@ -115,7 +113,6 @@ workspace "MyWorkspace"
 	  defines { "D__WXDEBUG__", "HAVE_W32API_H", "__WXMSW__", "_UNICODE"}
       symbols "On"
 	  architecture "x86"
-	  wxDebug = "si"
 	 if not (wx1=="n") then
 	 includedirs
     {
@@ -134,7 +131,6 @@ workspace "MyWorkspace"
 	  defines { "D__WXDEBUG__", "HAVE_W32API_H", "__WXMSW__", "_UNICODE" }
       symbols "On"
 	  architecture "x64"
-	  wxDebug = "si"
 	  if not (wx1=="n") then
 	  includedirs
     {
@@ -154,7 +150,6 @@ workspace "MyWorkspace"
 	  defines { "NDEBUG", "HAVE_W32API_H", "__WXMSW__", "_UNICODE" }
       optimize "On"
 	  architecture "x86" 
-	  wxDebug = "no"
 	  if not (wx1=="n") then
 	  includedirs
     {
@@ -185,7 +180,6 @@ workspace "MyWorkspace"
 	  defines { "NDEBUG", "HAVE_W32API_H", "__WXMSW__", "_UNICODE" }
       optimize "On"
 	  architecture "x64" 
-	  wxDebug = "no"
 	  if not (wx1=="n") then
 	  includedirs
       {
