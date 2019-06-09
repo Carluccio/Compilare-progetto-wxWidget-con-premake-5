@@ -1,6 +1,7 @@
 TITLE COMPILAZIONE PREMAKE-5
 @echo off
 MODE CON COLS=132 LINES=30
+COLOR 1F
 cd ..\..\Premake5
 if exist premake5.exe (
 goto premake
@@ -24,7 +25,6 @@ SET COMP64=D:\TDM-GCC-64A\bin
 @echo on
 :MENU
 TITLE COMPILAZIONE PREMAKE-5
-COLOR 1F
 SET INPUT=7
 CLS
 @echo.
