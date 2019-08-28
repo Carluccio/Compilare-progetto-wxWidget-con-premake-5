@@ -15,7 +15,7 @@ local allegro = "n" -- o "n"
 workspace "MyWorkspace"
    configurations { "DebugDinamic", "ReleaseDinamic", "DebugStatic", "ReleaseStatic" }
 	platforms      { "x64", "x32" }
-	project "Programma Archivio"
+	project "Programma"
    kind "WindowedApp"
    targetname ("$(NOMPROG)")
    language "C++"
