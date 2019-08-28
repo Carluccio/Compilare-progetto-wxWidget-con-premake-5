@@ -2,6 +2,8 @@ filter { "configurations:Release*", "platforms:*" }
 	linkoptions { s1 }
 	links
 	{
+	--"sqlite3u",
+	--"wxsqlite3_msw" ..VER .. "u",
 	"wxbase" .. VER .. "u",
 	"wxbase" .. VER .. "u_net",
 	"wxbase" .. VER .. "u_xml",
@@ -25,10 +27,13 @@ filter { "configurations:Release*", "platforms:*" }
 	"wxtiff",
 	"wxzlib"
 	}
+	
 	filter { "configurations:Debug*", "platforms:*" }
 	linkoptions { s1 }
 	links
 	{
+	--"sqlite3ud",
+	--"wxsqlite3_msw" ..VER .. "ud",
 	"wxmsw" .. VER .. "ud_core",
 	"wxbase" .. VER .. "ud",
 	"wxbase" .. VER .. "ud_net",
@@ -52,6 +57,7 @@ filter { "configurations:Release*", "platforms:*" }
 	"wxtiffd",
 	"wxzlibd"
 	}
+
 	filter { "configurations:*", "platforms:*" }
 	links
 	{
