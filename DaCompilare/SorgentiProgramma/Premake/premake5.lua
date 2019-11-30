@@ -1,6 +1,6 @@
 local ROOT = "../"
 -------------- wxWidgets o n --wxSQlite3 o n-------------
-local wx1 = "D:/wxWidgets-3.1.2" -- cambiare se si usa un'altra versione
+local wx1 = "C:/wxWidgets-3.1.x" -- cambiare se si usa un'altra versione
 local sq1 = "n" -- wxSQlite3
 VER = "31" -- cambiare se si usa un'altra versione
 local STA32= "gcc_lib"
@@ -45,16 +45,14 @@ workspace "MyWorkspace"
     {
      wx1 .. "/include",
 	 wx1 .. "/lib/" .. DIN32 .."/mswud",
-	 if not (sq1=="n") then
-	 sq1 .. "/include"
-	 end
+	 --sq1 .. "/include"
+	 
 	}
 	libdirs
     {
      wx1 .. "/lib/" .. DIN32 .."",
-	 if not (sq1=="n") then
-	 sq1 .. "/lib/" .. DIN32 ..""
-	 end
+	 --sq1 .. "/lib/" .. DIN32 ..""
+	 
     }  
    dofile "libwx.lua"
    end
@@ -69,16 +67,13 @@ workspace "MyWorkspace"
     {
      wx1 .. "/include",
 	 wx1 .. "/lib/" .. DIN64 .."/mswud",
-	 if not (sq1=="n") then
-	 sq1 .. "/include"
-	 end
-	}
+	 --sq1 .. "/include"
+	 }
 	libdirs
     {
      wx1 .. "/lib/" .. DIN64 .."",
-	 if not (sq1=="n") then
-	 sq1 .. "/lib/" .. DIN64 ..""
-	 end
+	 --sq1 .. "/lib/" .. DIN64 ..""
+	 
     }  
    dofile "libwx.lua"
    end
@@ -94,16 +89,14 @@ workspace "MyWorkspace"
     {
      wx1 .. "/include",
 	 wx1 .. "/lib/" .. DIN32 .."/mswu",
-	 if not (sq1=="n") then
-	 sq1 .. "/include"
-	 end
+	 --sq1 .. "/include"
+	 
 	}
 	libdirs
     {
      wx1 .. "/lib/" .. DIN32 .."",
-	 if not (sq1=="n") then
-	 sq1 .. "/lib/" .. DIN32 ..""
-	 end
+	 --sq1 .. "/lib/" .. DIN32 ..""
+	 
     }  
    dofile "libwx.lua"
    end
@@ -117,16 +110,14 @@ workspace "MyWorkspace"
       {
      wx1 .. "/include",
 	 wx1 .. "/lib/" .. DIN64 .."/mswu",
-	 if not (sq1=="n") then
-	 sq1 .. "/include"
-	 end
+	 --sq1 .. "/include"
+	 
 	}
 	libdirs
     {
      wx1 .. "/lib/" .. DIN64 .."",
-	 if not (sq1=="n") then
-	 sq1 .. "/lib/" .. DIN64 ..""
-	 end
+	 --sq1 .. "/lib/" .. DIN64 ..""
+	 
     }  
    dofile "libwx.lua"
    end
@@ -142,16 +133,14 @@ workspace "MyWorkspace"
     {
      wx1 .. "/include",
 	 wx1 .. "/lib/" .. STA32 .."/mswud",
-	 if not (sq1=="n") then
-	 sq1 .. "/include"
-	 end
+	 --sq1 .. "/include"
+	 
 	}
 	libdirs
     {
      wx1 .. "/lib/" .. STA32 .."",
-	 if not (sq1=="n") then
-	 sq1 .. "/lib/" .. STA32 ..""
-	 end
+	 --sq1 .. "/lib/" .. STA32 ..""
+	 
     }  
    dofile "libwx.lua"
    end
@@ -166,16 +155,14 @@ workspace "MyWorkspace"
     {
      wx1 .. "/include",
 	 wx1 .. "/lib/" .. STA64 .."/mswud",
-	 if not (sq1=="n") then
-	 sq1 .. "/include"
-	 end
+	 --sq1 .. "/include"
+	 
 	}
 	libdirs
     {
      wx1 .. "/lib/" .. STA64 .."",
-	 if not (sq1=="n") then
-	 sq1 .. "/lib/" .. STA64 ..""
-	 end
+	 --sq1 .. "/lib/" .. STA64 ..""
+	 
     }  
    dofile "libwx.lua"
    end
@@ -191,17 +178,14 @@ workspace "MyWorkspace"
     {
      wx1 .. "/include",
 	 wx1 .. "/lib/" .. STA32 .."/mswu",
-	 if not (sq1=="n") then
-	 sq1 .. "/include"
-	 end
-	}
+	 --sq1 .. "/include"
+	 }
 	
 	libdirs
     {
      wx1 .. "/lib/" .. STA32 .."",
-	 if not (sq1=="n") then
-	 sq1 .. "/lib/" .. STA32 ..""
-	 end
+	 --sq1 .. "/lib/" .. STA32 ..""
+	 
 	}  
    
    dofile "libwx.lua"
@@ -219,16 +203,14 @@ workspace "MyWorkspace"
       {
      wx1 .. "/include",
 	 wx1 .. "/lib/" .. STA64 .."/mswu",
-	 if not (sq1=="n") then
-	 sq1 .. "/include"
-	 end
+	 --sq1 .. "/include"
+	 
 	}
 	libdirs
     {
      wx1 .. "/lib/" .. STA64 .."",
-	 if not (sq1=="n") then
-	 sq1 .. "/lib/" .. STA64 ..""
-	 end
+	 --sq1 .. "/lib/" .. STA64 ..""
+	 
     }  
    dofile "libwx.lua"
    end
