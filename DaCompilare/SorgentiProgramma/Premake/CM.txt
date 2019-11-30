@@ -14,13 +14,13 @@ premake5 gmake --file="..\Programma\Premake\premake5.lua"
 :continua
 TITLE INIZIALIZZO
 cd ..\Programma\Premake
-SET OUT=D:\Eseguibili\Premake\Programma
+SET OUT=C:\Eseguibili\Premake\Programma
 set PROGRAMMA=Programma
 SET PATH1=%PATH%
 @echo --- WxWidgets e SqLite vedi premake5.lua --------------------------------------------
 @echo --- COMP32 o COMP64 =n se non installato, COMP32=COMP64 con uno stesso compilatore 64
-SET COMP32=D:\mingw64\bin
-SET COMP64=D:\mingw64\bin
+SET COMP32=C:\mingw64\bin
+SET COMP64=C:\mingw64\bin
 @echo --- ------------------------------------ --------------------------------------------
 @echo on
 :MENU
