@@ -168,6 +168,7 @@ end
 	filter {}
 	filter { "configurations:DebugStatic", "platforms:*32" }
 	  resoptions { "-F pe-i386" }
+	  linkoptions {"-static"}
 	  defines { "D__WXDEBUG__", "HAVE_W32API_H", "__WXMSW__", "_UNICODE"}
       symbols "On"
 	  architecture "x86"
@@ -202,6 +203,7 @@ end
 	filter { "configurations:DebugStatic", "platforms:*64" }
  	  defines { "D__WXDEBUG__", "HAVE_W32API_H", "__WXMSW__", "_UNICODE" }
       symbols "On"
+	  linkoptions {"-static"}
 	  architecture "x64"
 if (wx1 ~= "n") then
 if (sq1 ~= "n") then
@@ -233,6 +235,7 @@ end
 	filter {}         
    filter { "configurations:ReleaseStatic", "platforms:*32" }
 	  resoptions { "-F pe-i386" }
+	  linkoptions {"-static"}
 	  defines { "NDEBUG", "HAVE_W32API_H", "__WXMSW__", "_UNICODE" }
       optimize "On"
 	  architecture "x86"
@@ -269,6 +272,7 @@ end
    filter { "configurations:ReleaseStatic", "platforms:*64" }
 	  defines { "NDEBUG", "HAVE_W32API_H", "__WXMSW__", "_UNICODE" }
       optimize "On"
+	  linkoptions {"-static"}
 	  architecture "x64" 
 if (wx1 ~= "n") then
 if (sq1 ~= "n") then
