@@ -11,8 +11,6 @@ local STA32= "gcc_lib"
 local STA64= "gcc_x64_lib"
 local DIN32= "gcc_dll"
 local DIN64= "gcc_x64_dll"
-s1 = "-Wl,--start-group"
-s2 = "-Wl,--end-group"
 -------------- allegro o n -----------------
 local allegro = "n" -- o "n"
 --------------------------------------------

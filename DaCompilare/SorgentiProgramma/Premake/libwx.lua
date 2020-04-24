@@ -1,6 +1,5 @@
 if (sq1 ~= "n") then
 filter { "configurations:Release*", "platforms:*" }
-	linkoptions { s1 }
 	links
 	{
 	"sqlite3u",
@@ -30,7 +29,6 @@ filter { "configurations:Release*", "platforms:*" }
 	}
 else
 filter { "configurations:Release*", "platforms:*" }
-	linkoptions { s1 }
 	links
 	{
 	"wxbase" .. VER .. "u",
@@ -59,7 +57,6 @@ filter { "configurations:Release*", "platforms:*" }
 	end
 if (sq1 ~= "n") then
 filter { "configurations:Debug*", "platforms:*" }
-	linkoptions { s1 }
 	links
 	{
 	"sqlite3ud",
@@ -89,7 +86,6 @@ filter { "configurations:Debug*", "platforms:*" }
 	}
 else
 filter { "configurations:Debug*", "platforms:*" }
-	linkoptions { s1 }
 	links
 	{
 	"wxmsw" .. VER .. "ud_core",
@@ -122,3 +118,4 @@ filter { "configurations:*", "platforms:*" }
 	"kernel32", "user32", "gdi32", "comdlg32", "winspool", "winmm", "shell32", "shlwapi", "comctl32", "ole32", 
 	"oleaut32", "uuid", "rpcrt4", "advapi32", "version", "wsock32", "wininet", "oleacc", "uxtheme"
 	}
+linkgroups 'On'
