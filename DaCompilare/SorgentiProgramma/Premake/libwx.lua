@@ -2,7 +2,7 @@ if (sq1 ~= "n") then
 filter { "configurations:Release*", "platforms:*" }
 	links
 	{
-	"sqlite3u",
+	--"sqlite3u",
 	"wxsqlite3_msw" ..VER .. "u",
 	"wxbase" .. VER .. "u",
 	"wxbase" .. VER .. "u_net",
@@ -59,7 +59,7 @@ if (sq1 ~= "n") then
 filter { "configurations:Debug*", "platforms:*" }
 	links
 	{
-	"sqlite3ud",
+	--"sqlite3ud",
 	"wxsqlite3_msw" ..VER .. "ud",
 	"wxmsw" .. VER .. "ud_core",
 	"wxbase" .. VER .. "ud",
