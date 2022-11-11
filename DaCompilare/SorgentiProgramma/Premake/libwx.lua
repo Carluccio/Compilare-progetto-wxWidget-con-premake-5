@@ -2,7 +2,6 @@ if (sq1 ~= "n") then
 filter { "configurations:Release*", "platforms:*" }
 	links
 	{
-	--"sqlite3u",
 	"wxsqlite3_msw" ..VER .. "u",
 	"wxbase" .. VER .. "u",
 	"wxbase" .. VER .. "u_net",
@@ -21,6 +20,7 @@ filter { "configurations:Release*", "platforms:*" }
 	"wxmsw" .. VER .. "u_stc",
 	"wxmsw" .. VER .. "u_webview",
 	"wxmsw" .. VER .. "u_xrc",
+	"wxmsw" .. VER .. "u_qa",
 	"wxpng",
 	"wxregexu",
 	"wxscintilla",
@@ -48,6 +48,7 @@ filter { "configurations:Release*", "platforms:*" }
 	"wxmsw" .. VER .. "u_stc",
 	"wxmsw" .. VER .. "u_webview",
 	"wxmsw" .. VER .. "u_xrc",
+	"wxmsw" .. VER .. "u_qa",
 	"wxpng",
 	"wxregexu",
 	"wxscintilla",
@@ -59,7 +60,6 @@ if (sq1 ~= "n") then
 filter { "configurations:Debug*", "platforms:*" }
 	links
 	{
-	--"sqlite3ud",
 	"wxsqlite3_msw" ..VER .. "ud",
 	"wxmsw" .. VER .. "ud_core",
 	"wxbase" .. VER .. "ud",
@@ -78,6 +78,7 @@ filter { "configurations:Debug*", "platforms:*" }
 	"wxmsw" .. VER .. "ud_stc",
 	"wxmsw" .. VER .. "ud_webview",
 	"wxmsw" .. VER .. "ud_xrc",
+	"wxmsw" .. VER .. "ud_qa",
 	"wxpngd",
 	"wxregexud",
 	"wxscintillad",
@@ -105,6 +106,7 @@ filter { "configurations:Debug*", "platforms:*" }
 	"wxmsw" .. VER .. "ud_stc",
 	"wxmsw" .. VER .. "ud_webview",
 	"wxmsw" .. VER .. "ud_xrc",
+	"wxmsw" .. VER .. "ud_qa",
 	"wxpngd",
 	"wxregexud",
 	"wxscintillad",
