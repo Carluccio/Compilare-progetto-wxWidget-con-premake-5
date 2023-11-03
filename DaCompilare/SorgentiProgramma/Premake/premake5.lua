@@ -1,8 +1,8 @@
 local ROOT = "../"
 -------------- wxWidgets o n ---------------
-local wx1 = "C:/wxWidgets-3.1.x"
+local wx1 = "C:/wxWidgets-3.2.x"
 -------- versione wxWidgets-----------------
-VER = "31"
+VER = "32"
 -------------- wxsqlite o n ----------------
 sq1 = "n"
 --------------------------------------------
