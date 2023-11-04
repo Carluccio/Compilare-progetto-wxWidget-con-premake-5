@@ -118,6 +118,6 @@ filter { "configurations:*", "platforms:*" }
 	links
 	{
 	"kernel32", "user32", "gdi32", "comdlg32", "winspool", "winmm", "shell32", "shlwapi", "comctl32", "ole32", 
-	"oleaut32", "uuid", "rpcrt4", "advapi32", "version", "wsock32", "wininet", "oleacc", "uxtheme"
+	"oleaut32", "uuid", "rpcrt4", "advapi32", "version", "wsock32", "wininet", "oleacc", "uxtheme", "quadmath"
 	}
 linkgroups 'On'
